@@ -1,9 +1,27 @@
 Rails.application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+
+
+  get 'me', to: 'pages#me'
+  post '/me', to: 'pages#me'
 
   root 'pages#home'
-  get 'age', to: 'pages#age'
+  get '/stringify', to: 'pages#stringify'
+  post '/stringify', to: 'pages#stringify'
+
+
+  get '/age', to: 'pages#person'
+  post '/age', to: 'pages#person'
+
+  # The priority is based upon order of creation: first created -> highest priority.
+  # See how all your routes lay out with "rake routes".
+  #root 'me#homepage'
+
+  #root 'pages#home'
+
+
+ 
+  #get '/me' to: 'pages#me'
+  #verb "path", to: "controller#function"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
